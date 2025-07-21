@@ -1,0 +1,10 @@
+debug: true
+
+db:
+  host: postgres
+  user: challengephp
+  password: <password>
+  port: 5432
+  database: challengephp
+
+logFile: app.log
