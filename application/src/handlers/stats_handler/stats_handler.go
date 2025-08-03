@@ -27,7 +27,7 @@ func Handler(serv Services) (response.Response, lib.Error) {
 		return nil, err.Tap()
 	}
 	if !ok {
-		eventType.Id = 0 // по умолчанию
+		return serv.ResponseFactory().Error(404, "не найден тип"), nil
 	}
 
 	pages, err := serv.Repository().GetStatsPages(eventType.Id, from, to)
